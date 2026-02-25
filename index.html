@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visioplan | Visualisation 3D conseils d'aménagement extérieur</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Palette Logo Visioplan */
+        .visio-green { color: #8cc63f; } /* Le vert de votre logo */
+        .visio-bg-green { background-color: #8cc63f; }
+        .visio-blue { color: #00aeef; } /* Le bleu technique */
+        .visio-bg-dark { background-color: #000000; } 
+        
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('https://i.imgur.com/wPTVW1o.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .input-focus:focus {
+            border-color: #8cc63f;
+            box-shadow: 0 0 0 4px rgba(140, 198, 63, 0.1);
+        }
+
+        .card-dark {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+        }
+
+        .btn-visio {
+            background-color: #8cc63f;
+            transition: all 0.3s ease;
+        }
+        .btn-visio:hover {
+            background-color: #7ab335;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="visio-bg-dark text-white leading-normal">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-black/90 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <!-- Logo Visioplan -->
+                <img src="https://i.imgur.com/4z0zYI3.png" alt="Visioplan Logo" class="h-16 w-auto">
+                <div class="hidden sm:flex flex-col border-l border-white/20 pl-6">
+                    <span class="text-[10px] uppercase tracking-[0.2em] visio-green font-black leading-tight">Visualisation 3D</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-white font-black leading-tight whitespace-nowrap">conseils d'aménagement extérieur</span>
+                </div>
+            </div>
+            <div class="hidden lg:flex items-center gap-10 text-xs font-bold uppercase tracking-widest text-white/60">
+                <a href="#expertise" class="hover:text-white transition">Notre Approche</a>
+                <a href="tel:5145550123" class="btn-visio text-black px-8 py-3 rounded-none font-black transition shadow-lg">
+                    (514) 555-0123
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-gradient min-h-[90vh] flex items-center px-6">
+        <div class="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-8 leading-[1.05]">
+                    Faites plus <span class="visio-green">d'argent</span> en travaillant <span class="visio-blue">moins.</span>
+                </h1>
+                <p class="text-xl text-white/60 mb-10 font-light leading-relaxed border-l-2 border-white/20 pl-6 max-w-xl">
+                    Utilisez la puissance du 3D pour aller chercher le maximum d'idées et d'argent sur vos contrats! Déléguez-nous la conception technique et restez sur le terrain, on s'occupe du reste.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <a href="#form" class="btn-visio text-black px-10 py-5 font-black text-lg transition text-center shadow-2xl uppercase tracking-wider">
+                        Demander un appel exploratoire
+                    </a>
+                </div>
+            </div>
+            <div class="hidden lg:block">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative bg-black rounded-lg overflow-hidden border border-white/10">
+                        <img src="https://i.imgur.com/wPTVW1o.jpeg" alt="Rendu 3D Visioplan" class="opacity-70 group-hover:scale-105 transition duration-700">
+                        <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black to-transparent">
+                            <p class="text-xs font-black visio-green uppercase tracking-widest mb-2">Technologie & Réalité</p>
+                            <p class="text-white text-xl font-bold italic leading-tight">Vendez vos projets avant même le premier coup de pelle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Point 1 -->
+                <div class="p-10 card-dark group hover:border-green-500/50 transition duration-500">
+                    <div class="visio-green mb-6 italic font-black text-3xl">01</div>
+                    <h3 class="text-2xl font-black mb-4 text-white uppercase tracking-tighter">Upsell 3D Imbattable</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">
+                        Ne perdez plus de temps à expliquer. Montrez. Nos rendus 3D augmentent la valeur perçue de vos services et justifient des marges plus élevées.
+                    </p>
+                </div>
+                <!-- Point 2 -->
+                <div class="p-10 card-dark group hover:border-blue-500/50 transition duration-500 border-white/20">
+                    <div class="visio-blue mb-6 italic font-black text-3xl">02</div>
+                    <h3 class="text-2xl font-black mb-4 text-white uppercase tracking-tighter">Zéro dessin, Zéro souci</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">
+                        Libérez 15-20h par semaine. Votre expertise est sur le terrain, pas à gérer des logiciels complexes. On devient votre département de design privé.
+                    </p>
+                </div>
+                <!-- Point 3 -->
+                <div class="p-10 card-dark group hover:border-white/50 transition duration-500">
+                    <div class="text-white mb-6 italic font-black text-3xl">03</div>
+                    <h3 class="text-2xl font-black mb-4 text-white uppercase tracking-tighter">Pensé pour le chantier</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">
+                        Nos plans sont créés par d'anciens paysagistes. On sait ce que c'est que de gérer des dénivelés et du pavé. Nos plans fonctionnent en "vrai", pas juste sur papier.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section id="form" class="py-32 relative overflow-hidden bg-black">
+        <div class="absolute top-0 right-0 w-96 h-96 visio-bg-green opacity-5 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-600 opacity-5 rounded-full blur-[120px]"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="bg-zinc-900 border border-white/5 shadow-3xl overflow-hidden">
+                <div class="grid lg:grid-cols-2 gap-0">
+                    <div class="p-10 md:p-20 flex flex-col justify-center bg-zinc-900/50">
+                        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8 leading-tight">Rentabilisez votre <span class="visio-green">prochain projet.</span></h2>
+                        <p class="text-white/50 text-lg mb-12">
+                            Discutons de vos besoins techniques et voyons comment Visioplan Pro peut accélérer votre croissance en B2B.
+                        </p>
+                        <ul class="space-y-6">
+                            <li class="flex items-center gap-4 text-sm font-bold text-white uppercase tracking-widest">
+                                <span class="w-2 h-2 visio-bg-green rounded-full"></span> Plus de projets signés
+                            </li>
+                            <li class="flex items-center gap-4 text-sm font-bold text-white uppercase tracking-widest">
+                                <span class="w-2 h-2 visio-bg-blue rounded-full"></span> Moins d'heures au bureau
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-10 md:p-16">
+                        <h3 id="formTitle" class="text-2xl font-black text-black mb-8 uppercase tracking-tighter">Prendre rendez-vous</h3>
+                        
+                        <!-- Remplacez l'URL action ci-dessous par votre URL SheetDB -->
+                        <form id="leadForm" class="space-y-6">
+                            <div>
+                                <label class="text-[9px] font-black uppercase tracking-widest text-zinc-400 block mb-1">Votre Compagnie</label>
+                                <input type="text" name="company" required placeholder="Ex: Terrassement Laurentides" 
+                                    class="w-full border-b-2 border-zinc-100 p-3 text-black outline-none input-focus transition bg-transparent font-medium">
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="text-[9px] font-black uppercase tracking-widest text-zinc-400 block mb-1">Nom Complet</label>
+                                    <input type="text" name="name" required placeholder="Prénom Nom" 
+                                        class="w-full border-b-2 border-zinc-100 p-3 text-black outline-none input-focus transition bg-transparent font-medium">
+                                </div>
+                                <div>
+                                    <label class="text-[9px] font-black uppercase tracking-widest text-zinc-400 block mb-1">Téléphone Direct</label>
+                                    <input type="tel" name="phone" required placeholder="514-000-0000" 
+                                        class="w-full border-b-2 border-zinc-100 p-3 text-black outline-none input-focus transition bg-transparent font-medium">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="text-[9px] font-black uppercase tracking-widest text-zinc-400 block mb-1">Moment idéal pour l'appel</label>
+                                <select name="call_time" class="w-full border-b-2 border-zinc-100 p-3 text-black outline-none cursor-pointer bg-transparent uppercase text-[10px] font-black tracking-widest">
+                                    <option value="matin">Matinée (8h - 11h)</option>
+                                    <option value="apres-midi">Après-midi (13h - 17h)</option>
+                                    <option value="urgent">Dès que possible</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" id="submitBtn" class="w-full bg-black text-white hover:bg-zinc-800 font-black py-6 transition text-xs uppercase tracking-[0.4em] shadow-2xl">
+                                Envoyer la demande
+                            </button>
+                        </form>
+                        
+                        <div id="formSuccess" class="hidden text-center py-12">
+                            <div class="visio-green text-6xl mb-6">✓</div>
+                            <h4 class="text-3xl font-black text-black mb-2 uppercase tracking-tighter">Demande reçue</h4>
+                            <p class="text-zinc-500 font-medium italic">On se parle très bientôt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 border-t border-white/5 bg-black">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+            <img src="https://i.imgur.com/4z0zYI3.png" alt="Visioplan Logo" class="h-12">
+            <div class="flex flex-col md:items-end gap-2">
+                <div class="flex flex-wrap justify-center md:justify-end gap-6 text-[9px] font-black uppercase tracking-[0.2em] text-zinc-600">
+                    <span class="visio-green text-white">Visualisation 3D</span>
+                    <span class="text-white">conseils d'aménagement extérieur</span>
+                </div>
+                <div class="flex justify-center md:justify-end gap-10 text-[9px] font-black uppercase tracking-[0.3em] text-zinc-700">
+                    <span>© 2026 VISIOPLAN</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('leadForm');
+        const successMsg = document.getElementById('formSuccess');
+        const submitBtn = document.getElementById('submitBtn');
+        const formTitle = document.getElementById('formTitle');
+
+        // REMPLACEZ CETTE URL par votre URL SheetDB
+        const SHEETDB_URL = 'REPLACE_WITH_YOUR_SHEETDB_URL';
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // État de chargement
+            submitBtn.disabled = true;
+            submitBtn.innerText = "ENVOI EN COURS...";
+            submitBtn.style.opacity = "0.5";
+
+            const formData = new FormData(form);
+            
+            fetch(SHEETDB_URL, {
+                method: 'POST',
+                body: formData,
+            }).then(response => response.json())
+              .then(html => {
+                form.classList.add('hidden');
+                formTitle.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+              })
+              .catch(error => {
+                console.error('Erreur:', error);
+                submitBtn.disabled = false;
+                submitBtn.innerText = "ERREUR - RÉESSAYER";
+                submitBtn.style.opacity = "1";
+              });
+        });
+    </script>
+
+</body>
+</html>
