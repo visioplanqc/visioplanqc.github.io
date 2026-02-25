@@ -21,7 +21,7 @@
         .visio-bg-dark { background-color: #000000; } 
         
         .hero-gradient {
-            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('https://i.imgur.com/wPTVW1o.jpeg');
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('https://i.imgur.com/QfcAQ2W.jpeg');
             background-size: cover;
             background-position: center;
         }
@@ -45,6 +45,19 @@
             background-color: #7ab335;
             transform: translateY(-2px);
         }
+
+        /* Carrousel Styles */
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide {
+            min-width: 100%;
+        }
     </style>
 </head>
 <body class="visio-bg-dark text-white leading-normal">
@@ -60,10 +73,10 @@
                     <span class="text-[10px] uppercase tracking-[0.2em] text-white font-black leading-tight whitespace-nowrap">conseils d'aménagement extérieur</span>
                 </div>
             </div>
-            <div class="hidden lg:flex items-center gap-10 text-xs font-bold uppercase tracking-widest text-white/60">
+            <div class="flex items-center gap-10 text-xs font-bold uppercase tracking-widest text-white/60">
                 <a href="#expertise" class="hover:text-white transition">Notre Approche</a>
-                <a href="tel:5145550123" class="btn-visio text-black px-8 py-3 rounded-none font-black transition shadow-lg">
-                    (514) 555-0123
+                <a href="#form" class="btn-visio text-black px-8 py-3 rounded-none font-black transition shadow-lg">
+                    Contactez-nous
                 </a>
             </div>
         </div>
@@ -89,7 +102,7 @@
                 <div class="relative group">
                     <div class="absolute -inset-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
                     <div class="relative bg-black rounded-lg overflow-hidden border border-white/10">
-                        <img src="https://i.imgur.com/wPTVW1o.jpeg" alt="Rendu 3D Visioplan" class="opacity-70 group-hover:scale-105 transition duration-700">
+                        <img src="https://i.imgur.com/QfcAQ2W.jpeg" alt="Rendu 3D Visioplan" class="opacity-70 group-hover:scale-105 transition duration-700">
                         <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black to-transparent">
                             <p class="text-xs font-black visio-green uppercase tracking-widest mb-2">Technologie & Réalité</p>
                             <p class="text-white text-xl font-bold italic leading-tight">Vendez vos projets avant même le premier coup de pelle.</p>
@@ -132,6 +145,46 @@
         </div>
     </section>
 
+    <!-- Portfolio Carousel -->
+    <section class="py-12 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-2xl font-black mb-12 uppercase tracking-tighter text-center italic">Aperçu de nos réalisations</h2>
+            
+            <div class="carousel-container relative rounded-2xl border border-white/10 group">
+                <div id="carouselTrack" class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="https://i.imgur.com/DmJZULP.jpeg" class="w-full h-[600px] object-cover" alt="Projet 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://i.imgur.com/zruMnsv.jpeg" class="w-full h-[600px] object-cover" alt="Projet 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://i.imgur.com/FnKLWye.jpeg" class="w-full h-[600px] object-cover" alt="Projet 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://i.imgur.com/QfcAQ2W.jpeg" class="w-full h-[600px] object-cover" alt="Projet 4">
+                    </div>
+                </div>
+                
+                <!-- Contrôles -->
+                <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-visio-bg-green p-4 rounded-full transition opacity-0 group-hover:opacity-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-visio-bg-green p-4 rounded-full transition opacity-0 group-hover:opacity-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
+                </button>
+
+                <!-- Points indicateurs -->
+                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+                    <div class="dot w-3 h-3 rounded-full bg-white/20 transition-all cursor-pointer bg-white"></div>
+                    <div class="dot w-3 h-3 rounded-full bg-white/20 transition-all cursor-pointer"></div>
+                    <div class="dot w-3 h-3 rounded-full bg-white/20 transition-all cursor-pointer"></div>
+                    <div class="dot w-3 h-3 rounded-full bg-white/20 transition-all cursor-pointer"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Form Section -->
     <section id="form" class="py-32 relative overflow-hidden bg-black">
         <div class="absolute top-0 right-0 w-96 h-96 visio-bg-green opacity-5 rounded-full blur-[120px]"></div>
@@ -158,7 +211,6 @@
                     <div class="bg-white p-10 md:p-16">
                         <h3 id="formTitle" class="text-2xl font-black text-black mb-8 uppercase tracking-tighter">Prendre rendez-vous</h3>
                         
-                        <!-- Remplacez l'URL action ci-dessous par votre URL SheetDB -->
                         <form id="leadForm" class="space-y-6">
                             <div>
                                 <label class="text-[9px] font-black uppercase tracking-widest text-zinc-400 block mb-1">Votre Compagnie</label>
@@ -173,8 +225,8 @@
                                         class="w-full border-b-2 border-zinc-100 p-3 text-black outline-none input-focus transition bg-transparent font-medium">
                                 </div>
                                 <div>
-                                    <label class="text-[9px] font-black uppercase tracking-widest text-zinc-400 block mb-1">Téléphone Direct</label>
-                                    <input type="tel" name="phone" required placeholder="514-000-0000" 
+                                    <label class="text-[9px] font-black uppercase tracking-widest text-zinc-400 block mb-1">Courriel de contact</label>
+                                    <input type="email" name="email" required placeholder="votre@courriel.com" 
                                         class="w-full border-b-2 border-zinc-100 p-3 text-black outline-none input-focus transition bg-transparent font-medium">
                                 </div>
                             </div>
@@ -221,18 +273,55 @@
     </footer>
 
     <script>
+        // Logique Carrousel
+        const track = document.getElementById('carouselTrack');
+        const slides = Array.from(track.children);
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('bg-white', index === currentSlide);
+                dot.classList.toggle('bg-white/20', index !== currentSlide);
+            });
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateCarousel();
+            });
+        });
+
+        // Défilement automatique
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        }, 5000);
+
+        // Formulaire
         const form = document.getElementById('leadForm');
         const successMsg = document.getElementById('formSuccess');
         const submitBtn = document.getElementById('submitBtn');
         const formTitle = document.getElementById('formTitle');
 
-        // REMPLACEZ CETTE URL par votre URL SheetDB
         const SHEETDB_URL = 'REPLACE_WITH_YOUR_SHEETDB_URL';
 
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // État de chargement
             submitBtn.disabled = true;
             submitBtn.innerText = "ENVOI EN COURS...";
             submitBtn.style.opacity = "0.5";
